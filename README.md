@@ -1,4 +1,3 @@
-artifactmgr
-===========
+# Artifact Manager for OpenTOSCA
 
-Artifact Manager enables OpenTOSCA's operation invoker to run scripts
+The Artifact Manager enables [OpenTOSCA](http://www.opentosca.org)'s operation invoker to run management operations implemented using scripts.

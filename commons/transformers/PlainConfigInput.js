@@ -1,0 +1,1 @@
+callback(null, { config: input });

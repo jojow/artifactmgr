@@ -1,0 +1,29 @@
+{
+  "name": "artifactmgr",
+  "description": "The Artifact Manager enables OpenTOSCA's operation invoker to run scripts.",
+  "version": "0.0.1",
+  "author": "Johannes Wettinger",
+  "license": "MIT",
+  "repository": "git://github.com/jojow/artifactmgr",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "debug": "*",
+    "express": "3.x",
+    "jade": "*",
+    "uuid": "*",
+    "shortid": "*",
+    "lodash": "*",
+    "async": "*",
+    "fs-extra": "*",
+    "streamifier": "*",
+    "request": "*",
+    "xml2js": "*",
+    "js2xmlparser": "*",
+    "raw-body": "*",
+    "sandcastle": "*",
+    "underscore.string": "*",
+    "moment": "*"
+  }
+}

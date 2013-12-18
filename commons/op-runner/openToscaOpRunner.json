@@ -1,0 +1,42 @@
+{
+    "spec": {
+        "output": {
+            "runId": {
+                "type": "object"
+            }
+        }
+    },
+    "impl": {
+        "runtime": "sandbox-js",
+        "include": [
+            "helper.js",
+            "scriptArtifactBuilder.js",
+            "main.js"
+        ]
+    },
+    "links": {
+        "files": [
+            {
+                "id": {
+                    "filePath": "helper.js"
+                },
+                "readOnly": true,
+                "base64": "<%= helper %>"
+            },
+            {
+                "id": {
+                    "filePath": "scriptArtifactBuilder.js"
+                },
+                "readOnly": true,
+                "base64": "<%= scriptArtifactBuilder %>"
+            },
+            {
+                "id": {
+                    "filePath": "main.js"
+                },
+                "readOnly": true,
+                "base64": "<%= main %>"
+            }
+        ]
+    }
+}
