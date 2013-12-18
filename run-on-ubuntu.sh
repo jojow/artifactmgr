@@ -4,11 +4,12 @@ SCRIPTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 cd $SCRIPTDIR
 
-# Set env variable for OpenTOSCA:
+# Set env variable for OpenTOSCA's operation invoker:
 #  export ARTIFACT_MANAGER_URL=http://localhost:8888/runs?reqTransformer=PlainConfigInput
 
 # Get and start artifact manager:
 #  curl -L https://raw.github.com/jojow/artifactmgr/master/run-on-ubuntu.sh | sudo bash
+#  wget -qO- https://raw.github.com/jojow/artifactmgr/master/run-on-ubuntu.sh | sudo bash
 
 apt-get -y update
 apt-get -y install git
