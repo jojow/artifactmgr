@@ -1,6 +1,6 @@
 {
   "name": "artifactmgr",
-  "description": "The Artifact Manager enables OpenTOSCA's operation invoker to run scripts.",
+  "description": "Artifact Manager enables OpenTOSCA's operation invoker to run scripts",
   "version": "0.0.1",
   "author": "Johannes Wettinger",
   "license": "MIT",

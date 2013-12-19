@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<tosca:Definitions xmlns:tosca="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:ns1="http://opentosca.org/self-service" id="winery-defs-for_ns3-ArtifactManagerTOSCA" targetNamespace="http://www.example.org/artifact-manager/tosca">
+    <tosca:Import namespace="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaSpecificTypes" location="Definitions/tst__Ubuntu.tosca" importType="http://docs.oasis-open.org/tosca/ns/2011/12"/>
+    <tosca:Import namespace="http://www.example.org/artifact-manager/tosca" location="Definitions/ns3__TestScriptNode.tosca" importType="http://docs.oasis-open.org/tosca/ns/2011/12"/>
+    <tosca:Import namespace="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" location="Definitions/tbt__HostedOn.tosca" importType="http://docs.oasis-open.org/tosca/ns/2011/12"/>
+    <tosca:ServiceTemplate id="ArtifactManagerTOSCA" name="ArtifactManagerTOSCA" targetNamespace="http://www.example.org/artifact-manager/tosca">
+        <tosca:TopologyTemplate>
+            <tosca:NodeTemplate xmlns:tst="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaSpecificTypes" name="UbuntuNodeTemplate" id="UbuntuNodeTemplate" type="tst:Ubuntu" winery:x="405" winery:y="482">
+                <tosca:Properties>
+                    <ns2:UbuntuProperties
+                        xmlns:ns2="http://www.example.com/tosca/ubuntu"
+                        xmlns="http://www.example.com/tosca/ubuntu">
+                        <Address>ec2-54-196-225-96.compute-1.amazonaws.com</Address>
+                        <SSHUser>ubuntu</SSHUser>
+                        <SSHPrivateKey>-----BEGIN RSA PRIVATE KEY-----
+MIICWwIBAAKBgQCpXrusCutoPhGydVNMGtKdtgyQ3vlQbwWMGYG1qndvz3DcdNvv
+mU6EkQ3Qgv4Ta3oda760R6wjajr0CKs/PO9cYAZHFN6lLMOLlB8KsxnJGDyLlpS3
+iJbYjh9hyDxf/qSnkxoorEmLSDzDwxmR+a+ELOF77T0ZPwL62+rWhvsNYQIBJQKB
+gQCboyj+9UcF2CvwGMkVgG6DFf21jp/pDBLvcWJvlbncXcGn/K5teB6jVNxDEJZy
+tcoo34ylqaUZn+Mlb7/06+Ldw+HIcJF45ZpbuCGYuaVCNYPXzpEDOIOaUqy7JI9b
+p3yGC+Pk3fDzVtDtw9rL6x++OTvl9RCBjbyLzxBUmqHqjQJBAN8ag5TUHXHQr0+f
+2/dtVkDx5cms3cizXS7NL9KdLgKQ89kPFH/wnDLrBQqLdNDIAKLGEzVigDebXref
+NcMez1UCQQDCV/DnbDjfNEtHaa4t4gUklYY+77CY+eoFWfzkbJmJk7hw3l7geF6+
+X1KQmHt7247iaUjS0CopZbiz5wh1783dAkBsiXBx6qaKZYW4CJSGNTDhUxXXu+GE
+O5Udr+3AaCQ4mYtirWPrNsiHeUC5BZLGbyLnZ0edbjCJwTT/YjXUi4d1AkEAotQP
+BxV7we2LLf6Y2lWVmzErSXy2jgHR6M7azThk9roJO/iUrjtWTHlg2gM3Buhi9Qwa
+a3AjUx3f8KzPvMH/gQJAAOBZ4K0cqSszq1X9BLg34QqmwYPT4U6w/UQU6KCnIFAn
+LkdkLQg1BVNfmPU3J+eeJi+isuEaTfgNRvuZBn1mUA==
+-----END RSA PRIVATE KEY-----</SSHPrivateKey>
+                    </ns2:UbuntuProperties>
+                </tosca:Properties>
+            </tosca:NodeTemplate>
+            <tosca:NodeTemplate xmlns:ns3="http://www.example.org/artifact-manager/tosca" name="TestScriptNodeTemplate" id="TestScriptNodeTemplate" type="ns3:TestScriptNode" winery:x="467" winery:y="190">
+                <tosca:Properties>
+                    <ns4:TestProperties
+                        xmlns:ns4="http://www.example.com/tosca/testScript"
+                        xmlns="http://www.example.com/tosca/testScript">
+                        <TestProp>got it</TestProp>
+                    </ns4:TestProperties>
+                </tosca:Properties>
+            </tosca:NodeTemplate>
+            <tosca:RelationshipTemplate xmlns:tbt="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="con_21" id="con_21" type="tbt:HostedOn">
+                <tosca:SourceElement ref="TestScriptNodeTemplate"/>
+                <tosca:TargetElement ref="UbuntuNodeTemplate"/>
+            </tosca:RelationshipTemplate>
+        </tosca:TopologyTemplate>
+    </tosca:ServiceTemplate>
+</tosca:Definitions>

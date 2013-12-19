@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  targetNamespace="http://www.example.com/tosca/ubuntu" xmlns="http://www.example.com/tosca/ubuntu">
+  <xs:complexType name="tUbuntuProperties">
+    <xs:sequence>
+      <xs:element default="" name="Address" type="xs:string">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Public IP address or hostname</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element default="ubuntu" name="SSHUser" type="xs:string">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">SSH username</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element default="" name="SSHPrivateKey" type="xs:string">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">SSH private key</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UbuntuProperties" type="tUbuntuProperties"/>
+</xs:schema>

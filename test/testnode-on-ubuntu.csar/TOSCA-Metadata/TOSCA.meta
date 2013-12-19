@@ -1,0 +1,55 @@
+TOSCA-Meta-Version: 1.0
+CSAR-Version: 1.0
+Created-By: Winery 0.1.2.20131001.1134.20482a0004c (OpenTOSCA)
+Entry-Definitions: Definitions/ns3__ArtifactManagerTOSCA.tosca
+
+Name: Definitions/ns3__ArtifactManagerTOSCA.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/tst__Ubuntu.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/ns3__TestScriptNode.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/tbt__HostedOn.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/ns3__TestScriptNodeImpl.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/tbt__ContainerRequirement.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/tbt__ContainerCapability.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/tbt__RootRelationshipType.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/tbt__ScriptArtifact.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/ns3__at-testScript.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/tbt__RootRequirementType.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/tbt__RootCapabilityType.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/tbt__RootArtifactType.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: imports/http%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema/http%3A%2F%2Fdocs.oasis-open.org%2Ftosca%2Fns%2F2011%2F12%2FToscaBaseTypes/TOSCA-v1.0-BaseTypes/TOSCA-v1.0-BaseTypes.xsd
+Content-Type: text/xsd
+
+Name: imports/http%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema/http%3A%2F%2Fdocs.oasis-open.org%2Ftosca%2Fns%2F2011%2F12%2FToscaBaseTypes/Artifacts/Artifacts.xsd
+Content-Type: text/xsd
+
+Name: imports/UbuntuTypes.xsd
+Content-Type: text/xsd
+
+Name: files/test.sh
+Content-Type: application/x-sh

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<tosca:Definitions xmlns:tosca="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:ns1="http://opentosca.org/self-service" id="winery-defs-for_ns3-at-testScript" targetNamespace="http://www.example.org/artifact-manager/tosca">
+    <tosca:Import namespace="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" location="Definitions/tbt__ScriptArtifact.tosca" importType="http://docs.oasis-open.org/tosca/ns/2011/12"/>
+    <tosca:ArtifactTemplate xmlns:tbt="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="at-testScript" id="at-testScript" type="tbt:ScriptArtifact">
+        <Properties>
+            <tbt:ScriptArtifactProperties
+                xmlns:tbt="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" 
+                xmlns="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes">
+                <ScriptLanguage>sh</ScriptLanguage>
+                <PrimaryScript>files/test.sh</PrimaryScript>
+            </tbt:ScriptArtifactProperties>
+        </Properties>
+        <tosca:ArtifactReferences>
+            <tosca:ArtifactReference reference="files/test.sh"/>
+        </tosca:ArtifactReferences>
+    </tosca:ArtifactTemplate>
+</tosca:Definitions>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<tosca:Definitions xmlns:tosca="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:ns1="http://opentosca.org/self-service" id="winery-defs-for_ns3-TestScriptNodeImpl" targetNamespace="http://www.example.org/artifact-manager/tosca">
+    <tosca:Import namespace="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" location="Definitions/tbt__ScriptArtifact.tosca" importType="http://docs.oasis-open.org/tosca/ns/2011/12"/>
+    <tosca:Import namespace="http://www.example.org/artifact-manager/tosca" location="Definitions/ns3__at-testScript.tosca" importType="http://docs.oasis-open.org/tosca/ns/2011/12"/>
+    <tosca:NodeTypeImplementation xmlns:ns3="http://www.example.org/artifact-manager/tosca" name="TestScriptNodeImpl" targetNamespace="http://www.example.org/artifact-manager/tosca" nodeType="ns3:TestScriptNode">
+        <tosca:ImplementationArtifacts>
+            <tosca:ImplementationArtifact xmlns:tbt="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" interfaceName="TestInterface" operationName="test" artifactType="tbt:ScriptArtifact" artifactRef="ns3:at-testScript"/>
+        </tosca:ImplementationArtifacts>
+    </tosca:NodeTypeImplementation>
+</tosca:Definitions>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<tosca:Definitions xmlns:tosca="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:ns1="http://opentosca.org/self-service" id="winery-defs-for_tst-Ubuntu" targetNamespace="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaSpecificTypes">
+    <tosca:Import namespace="http://www.example.com/tosca/ubuntu" location="../imports/UbuntuTypes.xsd" importType="http://www.w3.org/2001/XMLSchema"/>
+    <tosca:NodeType name="Ubuntu" abstract="no" final="no" targetNamespace="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaSpecificTypes" winery:bordercolor="#a7c707">
+        <tosca:PropertiesDefinition element="ns4:UbuntuProperties" xmlns:ns4="http://www.example.com/tosca/ubuntu"/>
+    </tosca:NodeType>
+</tosca:Definitions>

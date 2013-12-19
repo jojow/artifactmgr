@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<tosca:Definitions xmlns:tosca="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:ns1="http://opentosca.org/self-service" id="winery-defs-for_ns3-TestScriptNode" targetNamespace="http://www.example.org/artifact-manager/tosca">
+    <tosca:Import namespace="http://www.example.org/artifact-manager/tosca" location="Definitions/ns3__TestScriptNodeImpl.tosca" importType="http://docs.oasis-open.org/tosca/ns/2011/12"/>
+    <tosca:NodeType name="TestScriptNode" targetNamespace="http://www.example.org/artifact-manager/tosca" winery:bordercolor="#8773bf">
+        <tosca:Interfaces>
+            <tosca:Interface name="TestInterface">
+                <tosca:Operation name="test">
+                    <tosca:InputParameters>
+                        <tosca:InputParameter name="firstParam" type="string" required="yes"/>
+                        <tosca:InputParameter name="secondParam" type="string" required="yes"/>
+                    </tosca:InputParameters>
+                    <tosca:OutputParameters>
+                        <tosca:OutputParameter name="stdout" type="string" required="yes"/>
+                        <tosca:OutputParameter name="stderr" type="string" required="yes"/>
+                    </tosca:OutputParameters>
+                </tosca:Operation>
+            </tosca:Interface>
+        </tosca:Interfaces>
+    </tosca:NodeType>
+</tosca:Definitions>
