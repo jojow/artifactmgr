@@ -8,14 +8,15 @@ var defaultParser = new express.bodyParser();
 
 var xmlParser = function(req, res, next) {
     getRawBody(req, {
-        expected: req.headers['content-length'],
-        limit: reqBodyLimitMb * 1024 * 1024
-    }, function (err, buffer) {
+        length: req.headers['content-length'],
+        limit: reqBodyLimitMb * 1024 * 1024,
+        encoding: 'utf8'
+    }, function (err, str) {
         var opts = {};
 
         if (req.query.preserveMetaData) opts.perserveMeta = true;
 
-        xml2js(buffer, opts, function(err, jsData) {
+        xml2js(str, opts, function(err, jsData) {
             if (err) return next(err);
 
             req.body = jsData;
