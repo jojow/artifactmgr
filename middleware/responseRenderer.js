@@ -12,7 +12,7 @@ module.exports = function() {
             res.jsonp(req.response);
         } else if (type === 'xml' || type === 'text/xml') {
             js2xml(req.response, function(err, xmlData) {
-                res.setHeader('Content-Type', 'application/xml');
+                res.setHeader('Content-Type', 'application/xml; charset=utf-8');
                 res.setHeader('Content-Length', _.size(xmlData));
 
                 res.end(xmlData);
