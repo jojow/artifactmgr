@@ -49,10 +49,10 @@ var scriptArtifactBuilder = function(template, context) {
         cmd += ' ' + arg;
     });
 
-    impl.push('exec("' + cmd + '", null, { sudo: true }, function(err, stdout, stderr) {');
+    impl.push('exec("' + cmd + '", null, { sudo: true, stderr2err: true, stdout2err: true }, function(err, stdout, stderr) {');
     impl.push('    output.stdout = stdout;');
     impl.push('    output.stderr = stderr;');
-    impl.push('    callback();');
+    impl.push('    callback(err);');
     impl.push('});');
 
     artifact.impl.exec = impl;

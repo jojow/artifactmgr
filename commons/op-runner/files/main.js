@@ -41,7 +41,7 @@ if (hostProps && _.size(hostProps) > 0) {
                access: 'ssh',
                ssh: {
                  user: hostProps.SSHUser,
-                 privateKey: hostProps.SSHPrivateKey
+                 privateKey: _.str.trim(hostProps.SSHPrivateKey)
                }
              }
            };
