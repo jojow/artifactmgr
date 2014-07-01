@@ -9,21 +9,21 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "debug": "*",
+    "debug": "1.0.2",
     "express": "3.x",
-    "jade": "*",
-    "uuid": "*",
-    "shortid": "*",
+    "jade": "1.0.2",
+    "uuid": "1.4.1",
+    "shortid": "2.0.1",
     "lodash": "*",
-    "async": "*",
-    "fs-extra": "*",
-    "streamifier": "*",
-    "request": "*",
-    "xml2js": "*",
-    "js2xmlparser": "*",
-    "raw-body": "*",
-    "sandcastle": "*",
-    "underscore.string": "*",
-    "moment": "*"
+    "async": "0.9.0",
+    "fs-extra": "0.10.0",
+    "streamifier": "0.1.0",
+    "request": "2.36.0",
+    "xml2js": "0.4.4",
+    "js2xmlparser": "0.1.3",
+    "raw-body": "1.2.2",
+    "sandcastle": "1.1.0",
+    "underscore.string": "2.3.3",
+    "moment": "2.7.0"
   }
 }
