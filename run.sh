@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 #
 # Set env variable for OpenTOSCA's operation invoker:
