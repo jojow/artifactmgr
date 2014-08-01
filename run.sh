@@ -6,7 +6,7 @@
 #
 
 if [ -z "$ARTIFACT_MANAGER_DIR" ]; then
-    ARTIFACT_MANAGER_DIR="~/artifactmgr"
+    ARTIFACT_MANAGER_DIR="$HOME/artifactmgr"
 fi
 
 cd $ARTIFACT_MANAGER_DIR
