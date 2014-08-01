@@ -11,7 +11,7 @@ cd $SCRIPTDIR
 #  curl -L https://raw.github.com/jojow/artifactmgr/master/run-on-ubuntu.sh | sudo bash
 #  wget -qO- https://raw.github.com/jojow/artifactmgr/master/run-on-ubuntu.sh | sudo bash
 
-apt-get -y update && apt-get -y install git curl
+apt-get -y update && apt-get -y install git curl python-software-properties python g++ make
 
 curl https://raw.githubusercontent.com/creationix/nvm/v0.12.2/install.sh | bash
 source ~/.nvm/nvm.sh
