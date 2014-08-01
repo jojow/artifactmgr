@@ -11,14 +11,18 @@ cd $SCRIPTDIR
 #  curl -L https://raw.github.com/jojow/artifactmgr/master/run-on-ubuntu.sh | sudo bash
 #  wget -qO- https://raw.github.com/jojow/artifactmgr/master/run-on-ubuntu.sh | sudo bash
 
-apt-get -y update
-apt-get -y install git
-git clone https://github.com/jojow/artifactmgr.git .
+apt-get -y update && apt-get -y install git curl
 
-apt-get -y install python-software-properties python g++ make
-add-apt-repository -y ppa:chris-lea/node.js
-apt-get -y update
-apt-get -y install nodejs
+curl https://raw.githubusercontent.com/creationix/nvm/v0.12.2/install.sh | bash
+source ~/.nvm/nvm.sh
+nvm install 0.10
+nvm use 0.10
+nvm alias default 0.10
+
+rm -rf ~/artifactmgr
+git clone https://github.com/jojow/artifactmgr.git ~/artifactmgr
+
+cd ~/artifactmgr
 
 npm install
 
