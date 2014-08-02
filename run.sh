@@ -9,9 +9,7 @@ if [ -z "$ARTIFACT_MANAGER_DIR" ]; then
     ARTIFACT_MANAGER_DIR="$HOME/artifactmgr"
 fi
 
-if [ -z "$NVM_DIR" ]; then
-    NVM_DIR="$HOME/.nvm"
-fi
+NVM_DIR="$ARTIFACT_MANAGER_DIR/.nvm"
 
 
 
@@ -19,4 +17,5 @@ source $NVM_DIR/nvm.sh
 
 cd $ARTIFACT_MANAGER_DIR
 
-DEBUG="artifactmgr:*" npm start 2>&1 | tee -a $ARTIFACT_MANAGER_DIR/artifactmgr.log
+DEBUG="artifactmgr:*" forever -l forever.log -o out.log -e err.log server.js
+#DEBUG="artifactmgr:*" npm start 2>&1 | tee -a $ARTIFACT_MANAGER_DIR/artifactmgr.log
