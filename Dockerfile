@@ -6,9 +6,9 @@ MAINTAINER Johannes Wettinger, http://github.com/jojow
 
 ENV ARTIFACT_MANAGER_DIR ${HOME}/artifactmgr
 
-ADD build.sh build.sh
+ADD install.sh install.sh
 
-RUN bash build.sh
+RUN bash install.sh && rm install.sh
 
 
 
