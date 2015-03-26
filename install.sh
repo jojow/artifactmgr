@@ -23,9 +23,14 @@ NVM_DIR="$ARTIFACT_MANAGER_DIR/.nvm"
 
 if sys_has "apt-get"; then
     sudo apt-get -y update
-    sudo apt-get -y install git python-software-properties python g++ make
+    sudo apt-get -y install curl git python-software-properties python g++ make
 elif sys_has "yum"; then
-    sudo yum -y install git-core
+    sudo yum -y install curl git-core
+fi
+
+if ! sys_has "curl"; then
+    echo "FAIL: curl is not installed"
+    exit 1
 fi
 
 if ! sys_has "git"; then
@@ -36,9 +41,10 @@ fi
 rm -rf $ARTIFACT_MANAGER_DIR
 git clone https://github.com/jojow/artifactmgr.git $ARTIFACT_MANAGER_DIR
 
+rm -rf $NVM_DIR
 git clone https://github.com/creationix/nvm.git $NVM_DIR
 cd $NVM_DIR
-git checkout tags/v0.12.2
+git checkout tags/v0.24.0
 
 source $NVM_DIR/nvm.sh
 
